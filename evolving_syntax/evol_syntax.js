@@ -1,6 +1,6 @@
 "use strict"
 
-function ninjaConstructor(name, cohort){
+function NinjaConstructor(name, cohort){
 	console.log("constructing a ninja...");
 	var belts = ["yellow","red","black"];
 	var ninja = {};
@@ -27,7 +27,7 @@ function ninjaConstructor(name, cohort){
 	return ninja;
 }
 
-// var n1 = new ninjaConstructor("Kris","Silicon Valley");
+// var n1 = new NinjaConstructor("Kris","Silicon Valley");
 
 // console.log(n1.name);
 // console.log(n1.cohort);
@@ -38,7 +38,7 @@ function ninjaConstructor(name, cohort){
 
 
 
-function personConstructor(name){
+function PersonConstructor(name){
 	console.log("constructing a person...");
 	var person = {};
 	person.name = name;
@@ -64,8 +64,8 @@ function personConstructor(name){
 }
 
 
-var p1 = new personConstructor("Kristopher");
-var p2 = new personConstructor("Jason");
+var p1 = new PersonConstructor("Kristopher");
+var p2 = new PersonConstructor("Jason");
 
 p1.say_name();
 console.log("Kristopher is starting out at",p1.distance_traveled);
