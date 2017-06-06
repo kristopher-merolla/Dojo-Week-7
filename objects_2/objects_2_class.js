@@ -14,19 +14,13 @@ class Vehicle {
 		var noise = noise || "honk honk!!";
 		console.log(noise);
 	}
-	getDistance() {
-		return this.distance_traveled;
-	}
-	updateDistanceTravelled() {
-		this.distance_traveled += this.speed;
-	}
+	getDistance() {return this.distance_traveled;}
+	updateDistanceTravelled() {this.distance_traveled += this.speed;}
 	move() {
 		this.makeNoise();
 		this.updateDistanceTravelled();
 	}
-	checkMiles() {
-		console.log(this.name,"is at",this.getDistance(),"distance");
-	}
+	checkMiles() {console.log(this.name,"is at",this.getDistance(),"distance");}
 }
 
 let bike = new Vehicle("bicycle",2,1,15);
