@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Fun Assignment - Kristopher Merolla</title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<button id="theButton" style="background-color:blue; color:white;">Click the button to change color!</button>
+	<div id="magicButton"></div>
+	<script>
+		$(document).ready(function(){
+			// Create a counter for clicks, starting at 0 (even)
+			var clickCounter = 0;
+			// Link variable "button" to a DOM element
+			var button = document.getElementById("theButton");
+			// Add DOM eventListeners to that variable
+			button.addEventListener("click",clickAction);
+			button.addEventListener("mouseenter",hoverOn);
+			button.addEventListener("mouseleave",hoverOff);
+			// Define the clickAction function
+			function clickAction() {
+				if (clickCounter%2 == 0) { // Even counter means we are CURRENTLY BLUE
+					$(this).css("background-color","red");
+				}
+				else {
+					$(this).css("background-color","blue");
+				}
+				clickCounter++;
+			}
+			// Define the hoverOn function
+			function hoverOn() {
+				$(this).css("background-color","green");
+			}
+			// Define the hoverOff function
+			function hoverOff() {
+				if (clickCounter%2 == 0) { // Even counter means we are CURRENTLY BLUE
+					$(this).css("background-color","blue");
+				}
+				else {
+					$(this).css("background-color","red");
+				}
+			}
+			// Add a listener for the DOM when a key is pressed, specifically "ENTER"
+			// the "ENTER" key will translate into the number 13 (see event.which)
+			$(document).keydown(function(event){
+				if (event.which == 13) {
+					alert("enter pressed");
+					$("#magicButton").html('<button id="theButton2" style="background-color:blue; color:white;">Click the button to change color!</button>');
+				}
+			});
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
