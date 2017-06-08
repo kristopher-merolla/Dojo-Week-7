@@ -1,10 +1,8 @@
-// require express
+
+// require express, add other frameworks too
 var express = require("express");
-// path module -- try to figure out where and why we use this
 var path = require("path");
-// create the express app (does not need 'require()'!)
 var app = express();
-// require body-parser
 var bodyParser = require('body-parser');
 
 // use body-parser
